@@ -1,5 +1,5 @@
 
-if SHIELD_CORNE_LEFT
+if SHIELD_CORNE_XIAO_LEFT
 
 # Name has to be fewer than 16 characters long
 config ZMK_KEYBOARD_NAME
@@ -10,7 +10,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
+if SHIELD_CORNE_XIAO_LEFT || SHIELD_CORNE_XIAO_RIGHT
 
 config ZMK_SPLIT
     default y

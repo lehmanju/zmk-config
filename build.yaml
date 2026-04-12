@@ -6,22 +6,22 @@
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
 # board: [ "nice_nano" ]
-# shield: [ "corne_left", "corne_right" ]
+# shield: [ "corne-xiao_left", "corne-xiao_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano
 #     shield: reviung41
 #   - board: nice_nano
-#     shield: corne_left
+#     shield: corne-xiao_left
 #     snippet: studio-rpc-usb-uart
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     artifact-name: corne_left_with_studio
+#     artifact-name: corne-xiao_left_with_studio
 #
 ---
 include:
   - board: seeeduino_xiao
-    shield: corne_left
+    shield: corne-xiao_left
     snippet: studio-rpc-usb-uart
   - board: seeeduino_xiao
-    shield: corne_right
+    shield: corne-xiao_right
     snippet: studio-rpc-usb-uart

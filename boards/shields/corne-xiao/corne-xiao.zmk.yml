@@ -1,10 +1,10 @@
 file_format: "1"
-id: corne
-name: CORNE
+id: corne-xiao
+name: CORNE-XIAO
 type: shield
 requires: [seeeduino_xiao]
 features:
   - keys
 siblings:
-  - corne_left
-  - corne_right
+  - corne-xiao_left
+  - corne-xiao_right
