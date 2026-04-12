@@ -1,0 +1,58 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define BASE 0
+#define L1 1
+#define L2 2
+#define L3 3
+
+&mt {
+  tapping-term-ms = <200>;
+  flavor = "hold-preferred";
+};
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    base_layer {
+      display-name = "BASE";
+      bindings = <
+        &kp ESC     &kp X       &kp V       &kp L        &kp C      &kp W          &kp K        &kp H      &kp G       &kp F      &kp Q      &kp MINUS
+        &kp TAB     &kp U       &kp I       &kp A        &kp E      &kp O          &kp S        &kp N      &kp R       &kp T      &kp D      &kp Z
+        &kp LSHFT   &kp LBKT    &kp SEMI    &kp SQT      &kp P      &kp Y          &kp B        &kp M      &kp COMMA   &kp DOT    &kp J      &kp RSHFT
+                                      &kp LCTRL  &lt L3 BSPC  &lt L2 DEL   &lt L1 RET  &mt LALT SPACE  &kp LGUI
+      >;
+    };
+
+    layer_1 {
+      display-name = "L1";
+      bindings = <
+        &kp F11     &kp F1      &kp F2      &kp F3       &kp F4     &kp F5         &kp F6       &kp F7     &kp F8      &kp F9     &kp F10    &kp F12
+        &trans      &kp N1      &kp N2      &kp N3       &kp N4     &kp N5         &kp N6       &kp N7     &kp N8      &kp N9     &kp N0     &trans
+        &trans      &trans      &trans      &trans       &trans     &trans         &trans       &trans     &trans      &trans     &trans     &trans
+                                      &trans     &trans       &trans      &trans      &trans          &trans
+      >;
+    };
+
+    layer_2 {
+      display-name = "L2";
+      bindings = <
+        &trans      &trans      &trans      &trans       &trans     &trans         &kp PG_UP    &trans     &kp UP      &trans     &trans     &trans
+        &trans      &trans      &trans      &trans       &trans     &trans         &kp HOME     &kp LEFT   &kp DOWN    &kp RIGHT  &kp END    &trans
+        &trans      &trans      &trans      &trans       &trans     &trans         &kp PG_DN    &kp BSPC   &kp DEL     &kp SPACE  &trans     &trans
+                                      &trans     &trans       &trans      &trans      &trans          &trans
+      >;
+    };
+
+    layer_3 {
+      display-name = "L3";
+      bindings = <
+        &trans      &kp RA(DOT)     &kp LS(FSLH)   &kp RA(N8)      &kp RA(N9)      &kp GRAVE        &kp LS(N1)      &kp NUBS        &kp LS(NUBS)   &kp LS(N0)    &kp LS(N6)    &kp RA(S)
+        &trans      &kp RA(MINUS)   &kp LS(N7)     &kp RA(N7)      &kp RA(N0)      &kp LS(RBKT)     &kp LS(MINUS)   &kp LS(N8)      &kp LS(N9)     &kp FSLH      &kp LS(DOT)   &kp RA(Q)
+        &trans      &kp NUHS        &kp LS(N4)     &kp RA(NUBS)    &kp RA(RBKT)    &kp LS(EQUAL)    &kp RBKT        &kp LS(N5)      &kp LS(N2)     &kp LS(NUHS)  &kp LS(COMMA) &trans
+                                           &trans         &trans          &trans          &trans           &trans           &trans
+      >;
+    };
+  };
+};
