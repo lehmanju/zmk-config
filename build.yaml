@@ -19,15 +19,12 @@
 #
 ---
 include:
-  - board: seeeduino_xiao
-    shield: corne-xiao_left
-    snippet: zmk-usb-logging studio-rpc-usb-uart
-  - board: seeeduino_xiao
-    shield: corne-xiao_right
-    snippet: zmk-usb-logging studio-rpc-usb-uart
-  - board: seeeduino_xiao
+  - board: xiao_ble
+    shield: klein_left
+    snippet: nrf52840-nosd zmk-usb-logging
+  - board: xiao_ble
+    shield: klein_right
+    snippet: nrf52840-nosd zmk-usb-logging
+  - board: xiao_ble
     shield: settings_reset
-    snippet: zmk-usb-logging
-  - board: seeeduino_xiao
-    shield: tester_xiao
-    snippet: zmk-usb-logging
+    snippet: nrf52840-nosd zmk-usb-logging
