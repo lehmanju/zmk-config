@@ -21,7 +21,13 @@
 include:
   - board: seeeduino_xiao
     shield: corne-xiao_left
-    snippet: studio-rpc-usb-uart
+    snippet: zmk-usb-logging studio-rpc-usb-uart
   - board: seeeduino_xiao
     shield: corne-xiao_right
-    snippet: studio-rpc-usb-uart
+    snippet: zmk-usb-logging studio-rpc-usb-uart
+  - board: seeeduino_xiao
+    shield: settings_reset
+    snippet: zmk-usb-logging
+  - board: seeeduino_xiao
+    shield: tester_xiao
+    snippet: zmk-usb-logging
