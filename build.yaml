@@ -21,10 +21,10 @@
 include:
   - board: xiao_ble
     shield: klein_left
-    snippet: nrf52840-nosd zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: xiao_ble
     shield: klein_right
-    snippet: nrf52840-nosd zmk-usb-logging
+    snippet: zmk-usb-logging
   - board: xiao_ble
     shield: settings_reset
-    snippet: nrf52840-nosd zmk-usb-logging
+    snippet: zmk-usb-logging
