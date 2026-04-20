@@ -7,6 +7,24 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
+&pinctrl {
+    sercom4_uart_split_default: sercom4_uart_split_default {
+        group1 {
+            pinmux = <PB8D_SERCOM4_PAD0>;
+        };
+    };
+};
+
+&sercom4 {
+    /* One-wire UART on D6 (PB8), shared RX/TX pad for split half-duplex. */
+    rxpo = <0>;
+    txpo = <0>;
+    collision-detection;
+
+    pinctrl-0 = <&sercom4_uart_split_default>;
+    pinctrl-names = "default";
+};
+
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -15,6 +33,7 @@
     wired_split {
         compatible = "zmk,wired-split";
         device = <&xiao_serial>;
+        half-duplex;
     };
 
     default_transform: keymap_transform_0 {
