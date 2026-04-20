@@ -39,7 +39,7 @@
       display-name = "L2";
       bindings = <
         &trans      &trans      &trans      &trans       &trans     &trans         &kp PG_UP    &trans     &kp UP      &trans     &trans     &trans
-        &trans      &trans      &trans      &trans       &trans     &trans         &kp HOME     &kp LEFT   &kp DOWN    &kp RIGHT  &kp END    &trans
+        &trans      &trans      &trans      &trans       &trans     &studio_unlock         &kp HOME     &kp LEFT   &kp DOWN    &kp RIGHT  &kp END    &trans
         &trans      &trans      &trans      &trans       &trans     &trans         &kp PG_DN    &kp BSPC   &kp DEL     &kp SPACE  &trans     &trans
                                       &trans     &trans       &trans      &trans      &trans          &trans
       >;
